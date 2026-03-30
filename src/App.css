@@ -6,6 +6,37 @@
   themes: light --default;
 }
 
-body{
+body {
   font-family: "Manrope", sans-serif;
+}
+
+.button-primary {
+  background: #4f39f6;
+  background: linear-gradient(
+    90deg,
+    rgba(79, 57, 246, 1) 0%,
+    rgba(149, 20, 250, 1) 100%
+  );
+  color: white;
+  padding: 10px 17px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.button-primary:hover {
+  background: #432aff;
+  background: linear-gradient(90deg, #2f14ff 0%, #7400cc 100%);
+}
+
+.button-secondary {
+  background-color: white;
+  border: 1px solid #4f39f6;
+  color: #4f39f6;
+  padding: 10px 17px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.button-secondary:hover {
+  background: linear-gradient(90deg, #4f39f6 0%, #9514fa 100%);
+  color: white;
 }
