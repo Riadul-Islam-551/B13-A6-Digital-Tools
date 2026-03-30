@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Plan",
+    "description": "Perfect for beginners starting their journey.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "Export to PDF"],
+    "icon": "starter-icon"
+  },
+  {
+    "id": 2,
+    "name": "Basic Plan",
+    "description": "Ideal for individuals building their professional profile.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "50+ templates",
+      "ATS optimization",
+      "Download in multiple formats"
+    ],
+    "icon": "basic-icon"
+  },
+  {
+    "id": 3,
+    "name": "Pro Plan",
+    "description": "Best for professionals who need advanced tools.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "100+ templates",
+      "Advanced customization",
+      "Cover letter builder",
+      "Priority support"
+    ],
+    "icon": "pro-icon"
+  },
+  {
+    "id": 4,
+    "name": "Lifetime Access",
+    "description": "One-time payment for lifetime access.",
+    "price": 199,
+    "period": "one-time",
+    "tag": "best deal",
+    "tagType": "popular",
+    "features": [
+      "All templates unlocked",
+      "Lifetime updates",
+      "Premium support",
+      "Unlimited exports"
+    ],
+    "icon": "lifetime-icon"
+  },
+  {
+    "id": 5,
+    "name": "Business Plan",
+    "description": "Designed for teams and small businesses.",
+    "price": 99,
+    "period": "monthly",
+    "tag": "recommended",
+    "tagType": "best",
+    "features": [
+      "Team collaboration",
+      "Custom branding",
+      "Shared templates",
+      "Analytics dashboard"
+    ],
+    "icon": "business-icon"
+  },
+  {
+    "id": 6,
+    "name": "Enterprise Plan",
+    "description": "Advanced solution for large organizations.",
+    "price": 299,
+    "period": "yearly",
+    "tag": "premium",
+    "tagType": "new",
+    "features": [
+      "Unlimited users",
+      "Dedicated account manager",
+      "API access",
+      "Custom integrations"
+    ],
+    "icon": "enterprise-icon"
+  }
+]
