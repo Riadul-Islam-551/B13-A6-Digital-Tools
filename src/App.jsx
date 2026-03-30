@@ -1,10 +1,10 @@
 import "./App.css";
+import Nav from "./components/nav/Nav";
 
 function App() {
   return (
     <>
-      <h1>DevTools</h1>
-     <button className="button-primary">Get Started</button>
+      <Nav></Nav>
     </>
   );
 }

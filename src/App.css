@@ -22,6 +22,9 @@ body {
   border-radius: 50px;
   font-weight: bold;
 }
+
+
+
 .button-primary:hover {
   background: #432aff;
   background: linear-gradient(90deg, #2f14ff 0%, #7400cc 100%);
@@ -31,7 +34,7 @@ body {
   background-color: white;
   border: 1px solid #4f39f6;
   color: #4f39f6;
-  padding: 10px 17px;
+  padding: 8px 17px;
   border-radius: 50px;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -39,4 +42,16 @@ body {
 .button-secondary:hover {
   background: linear-gradient(90deg, #4f39f6 0%, #9514fa 100%);
   color: white;
+}
+@media screen and (max-width: 550px) {
+  .button-primary {
+    padding: 7px 12px;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .button-secondary {
+  padding: 5px 12px;
+  font-weight: normal;
+  font-size: 14px;
+}
 }
