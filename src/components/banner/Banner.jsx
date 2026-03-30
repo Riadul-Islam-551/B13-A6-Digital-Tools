@@ -5,7 +5,7 @@ import play from "../../assets/Play.png";
 
 const Banner = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen  ">
+    <div className="hero bg-base-200 py-12  ">
       <div className="hero-content px-3 md:px-7  flex-col lg:flex-row-reverse  w-full max-w-300 mx-auto">
         <img src={banner} className="md:m-7 rounded-lg shadow-lg " />
         <div>
@@ -14,10 +14,10 @@ const Banner = () => {
             <h3 className="text-primary ">New: AI-Powered Tools Available</h3>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold mt-4">
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-5 md:mt-7 lg:mt-16">
             Supercharge Your <br /> Digital Workflow
           </h1>
-          <p className="text-xsm md:text-md  py-6 text-secondary">
+          <p className="text-xsm md:text-md  py-6 text-secondary  lg:mb-12">
             Access premium AI tools, design assets, templates, and productivity{" "}
             <br />
             software—all in one place. Start creating faster today. <br />{" "}

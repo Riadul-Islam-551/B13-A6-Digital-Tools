@@ -14,8 +14,8 @@ body {
   background: #4f39f6;
   background: linear-gradient(
     90deg,
-    rgba(79, 57, 246, 1) 0%,
-    rgba(149, 20, 250, 1) 100%
+    #4f39f6 0%,
+    #9514fa 100%
   );
   color: white;
   padding: 10px 17px;
