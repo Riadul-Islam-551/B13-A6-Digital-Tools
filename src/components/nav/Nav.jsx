@@ -24,7 +24,7 @@ const Nav = () => {
   return (
     <div className=" bg-base-100 shadow-sm">
       <div className="navbar max-w-300 mx-auto">
-        <div className="navbar-start">
+        <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -50,7 +50,7 @@ const Nav = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl border -mx-6 font-extrabold text-primary">DigiTools</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
