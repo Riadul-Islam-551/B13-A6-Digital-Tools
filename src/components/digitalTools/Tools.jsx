@@ -1,19 +1,10 @@
-import React, { use } from "react";
-import ProductCard from "./productCard/ProductCard";
-
+import React, { Suspense, useState } from "react";
+import Products from "./product/Products";
+import CartDetails from "./cartDetails/CartDetails.jsx";
 const Tools = ({ fetchProducts }) => {
-  const products = use(fetchProducts);
-  // console.log(products);
+  const [productStage, setProductStage] = useState("showProducts");
+  console.log(productStage);
 
-  // const [productState, setProductState] = useState("products");
-  // const showProduct = (products) => {
-  //   setProductState(products);
-  //   console.log(productState);
-  // };
-  // const showCart = (cart) => {
-  //   setProductState(cart);
-  //   console.log(productState);
-  // };
   return (
     <div>
       <div className="max-w-300 mx-auto text-center py-12 md:py-20 px-2">
@@ -27,24 +18,25 @@ const Tools = ({ fetchProducts }) => {
         {/* products buttons  */}
         <div className="mt-7 space-x-3">
           <button
-            onClick={() => showProduct("products")}
-            className="button-primary"
+            onClick={() => setProductStage("showProducts")}
+            className={`${productStage === "showProducts" ? "button-primary" : "button-secondary"}`}
           >
             Products
           </button>
-          <button onClick={() => showCart("cart")} className="button-secondary">
+          <button
+            onClick={() => setProductStage("showCart")}
+            className={`${productStage === "showCart" ? "button-primary" : "button-secondary"}`}
+          >
             Cart
           </button>
         </div>
         {/* showing the products  */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-9 px-9 my-9
-        "
-        >
-          {products.map((product, ind) => (
-            <ProductCard key={ind} product={product}></ProductCard>
-          ))}
-        </div>
+        <Suspense fallback={<p>Loading</p>}>
+          {productStage === "showProducts" && (
+            <Products fetchProducts={fetchProducts}></Products>
+          )}
+          {productStage === "showCart" && <CartDetails></CartDetails>}
+        </Suspense>
       </div>
     </div>
   );

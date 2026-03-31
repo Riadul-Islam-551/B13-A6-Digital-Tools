@@ -8,7 +8,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["10+ templates", "Basic customization", "Export to PDF"],
-    "icon": "starter-icon"
+    "icon": "/src/assets/products/camera.png"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
       "ATS optimization",
       "Download in multiple formats"
     ],
-    "icon": "basic-icon"
+    "icon": "/src/assets/products/writing_2327400 1.png"
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@
       "Cover letter builder",
       "Priority support"
     ],
-    "icon": "pro-icon"
+    "icon": "/src/assets/products/social-media.png"
   },
   {
     "id": 4,
@@ -55,7 +55,7 @@
       "Premium support",
       "Unlimited exports"
     ],
-    "icon": "lifetime-icon"
+    "icon": "/src/assets/products/portfolio.png"
   },
   {
     "id": 5,
@@ -71,7 +71,7 @@
       "Shared templates",
       "Analytics dashboard"
     ],
-    "icon": "business-icon"
+    "icon": "/src/assets/products/operation.png"
   },
   {
     "id": 6,
@@ -87,6 +87,6 @@
       "API access",
       "Custom integrations"
     ],
-    "icon": "enterprise-icon"
+    "icon": "/src/assets/products/design-tool.png"
   }
 ]

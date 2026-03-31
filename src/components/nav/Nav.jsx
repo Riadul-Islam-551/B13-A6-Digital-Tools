@@ -56,8 +56,10 @@ const Nav = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end space-x-2">
+          {/* cart icon  */}
           <div>
             <img src={cartImage} alt="" />
+            <p>0</p>
           </div>
           <button className="button-secondary">Login</button>
           <button className="button-primary">Get Started</button>

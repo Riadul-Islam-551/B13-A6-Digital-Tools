@@ -1,14 +1,17 @@
 import React from "react";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
-  const { name, description, price, period, tagType, features } =
-    product;
+  //   console.log(product);
+  const { name, description, price, period, tagType, features, icon } = product;
   return (
     <div>
       <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-200">
-        <div className="flex justify-between items-center mb-3">
-          <img src="" alt="" />
+        <div className="flex justify-between items-start">
+          <img
+            className="my-3 border border-gray-200 p-3 rounded-full"
+            src={icon}
+            alt=""
+          />{" "}
           {/* tag type  */}
           <span
             className={`text-sm capitalize py-1 px-3 rounded-full ${tagType === "new" ? "text-green-600 bg-green-100" : ""} ${tagType === "popular" ? "text-blue-600 bg-blue-100" : ""} ${tagType === "best" ? "text-yellow-600 bg-yellow-100" : ""}`}

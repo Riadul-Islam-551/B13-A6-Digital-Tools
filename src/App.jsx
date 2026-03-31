@@ -1,6 +1,6 @@
 import "./App.css";
 import Banner from "./components/banner/Banner";
-import Tools from "./components/digitalTools/Tools";
+import Tools from "./components/digitalTools/Tools"
 import Nav from "./components/nav/Nav";
 import States from "./components/states/States";
 
