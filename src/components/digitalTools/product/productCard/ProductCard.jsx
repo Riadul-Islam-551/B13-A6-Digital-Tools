@@ -1,4 +1,5 @@
 import React from "react";
+import { TiTick } from "react-icons/ti";
 
 const ProductCard = ({ product, cartProducts, setCartProducts }) => {
   const { name, description, price, period, tagType, features, icon } = product;
@@ -55,7 +56,7 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
           {features.map((feature, ind) => {
             return (
               <li key={ind} className="flex items-center text-gray-600 text-sm">
-                <span className="text-green-500 mr-2">✔</span>
+                <span className="text-green-500 mr-2"><TiTick /></span>
                 {feature}
               </li>
             );

@@ -5,6 +5,7 @@ import Tools from "./components/digitalTools/Tools";
 import Nav from "./components/nav/Nav";
 import States from "./components/states/States";
 import Steps from "./components/steps/Steps";
+import PackagePrice from "./components/packagePrice/PackagePrice";
 
 const fetchProducts = fetch("/product.json")
   .then((res) => res.json())
@@ -26,6 +27,7 @@ function App() {
         fetchProducts={fetchProducts}
       ></Tools>
       <Steps></Steps>
+      <PackagePrice></PackagePrice>
     </>
   );
 }
