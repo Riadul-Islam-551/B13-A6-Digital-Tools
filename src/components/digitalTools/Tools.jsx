@@ -1,9 +1,11 @@
 import React, { Suspense, useState } from "react";
 import Products from "./product/Products";
-import CartDetails from "./cartDetails/CartDetails.jsx";
-const Tools = ({ fetchProducts }) => {
+import CartDetails from "./cartDetails/CartDetails";
+const Tools = ({ fetchProducts, cartProducts, setCartProducts }) => {
+  // toggoling the product button and cart button 
   const [productStage, setProductStage] = useState("showProducts");
   console.log(productStage);
+
 
   return (
     <div>
@@ -27,13 +29,13 @@ const Tools = ({ fetchProducts }) => {
             onClick={() => setProductStage("showCart")}
             className={`${productStage === "showCart" ? "button-primary" : "button-secondary"}`}
           >
-            Cart
+            Cart <span>({cartProducts.length})</span>
           </button>
         </div>
         {/* showing the products  */}
         <Suspense fallback={<p>Loading</p>}>
           {productStage === "showProducts" && (
-            <Products fetchProducts={fetchProducts}></Products>
+            <Products cartProducts={cartProducts} setCartProducts={setCartProducts} fetchProducts={fetchProducts}></Products>
           )}
           {productStage === "showCart" && <CartDetails></CartDetails>}
         </Suspense>

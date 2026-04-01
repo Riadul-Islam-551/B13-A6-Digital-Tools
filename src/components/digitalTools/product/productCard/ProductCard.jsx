@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ProductCard = ({ product }) => {
-  //   console.log(product);
+const ProductCard = ({ product, cartProducts, setCartProducts }) => {
   const { name, description, price, period, tagType, features, icon } = product;
+
+  // set the button disabled function
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  // set the product to the cart section
+  const addToCart = () => {
+    console.log("buy now is clicked", product);
+    setCartProducts([...cartProducts, product]);
+    setIsDisabled(true);
+  };
+  // console.log(isDisabled);
+
   return (
     <div>
       <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-200">
@@ -45,7 +56,13 @@ const ProductCard = ({ product }) => {
         </ul>
 
         {/* Button */}
-        <button className="w-full button-primary">Buy Now</button>
+        <button
+          onClick={addToCart}
+          className="w-full button-primary"
+          disabled={isDisabled ? true : false}
+        >
+          {isDisabled === true ? "Purchased" : "Buy Now"}
+        </button>
       </div>
     </div>
   );

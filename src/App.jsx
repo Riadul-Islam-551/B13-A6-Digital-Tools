@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import Tools from "./components/digitalTools/Tools"
@@ -11,12 +12,15 @@ const fetchProducts = fetch("/product.json")
   });
 
 function App() {
+
+  const [cartProducts, setCartProducts] = useState([]);
+  console.log(cartProducts);
   return (
     <>
-      <Nav></Nav>
+      <Nav cartProducts={cartProducts}></Nav>
       <Banner></Banner>
       <States></States>
-      <Tools fetchProducts={fetchProducts}></Tools>
+      <Tools cartProducts={cartProducts} setCartProducts={setCartProducts} fetchProducts={fetchProducts}></Tools>
     </>
   );
 }

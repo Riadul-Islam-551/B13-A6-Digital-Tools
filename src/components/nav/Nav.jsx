@@ -1,7 +1,8 @@
 import React from "react";
 import cartImage from "../../assets/products/shopping-cart.png";
 
-const Nav = () => {
+const Nav = ({cartProducts}) => {
+  // console.log(cartProducts.length);
   const links = (
     <>
       <li>
@@ -50,16 +51,20 @@ const Nav = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl border -mx-6 font-extrabold text-primary">DigiTools</a>
+          <a className="btn btn-ghost text-xl border -mx-6 font-extrabold text-primary">
+            DigiTools
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end space-x-2">
           {/* cart icon  */}
-          <div>
-            <img src={cartImage} alt="" />
-            <p>0</p>
+          <div className="relative">
+            <img className="" src={cartImage} alt="" />
+            <p className="absolute -top-3 -right-1 text-amber-600 text-xs font-bold ">
+              {cartProducts.length}
+            </p>
           </div>
           <button className="button-secondary">Login</button>
           <button className="button-primary">Get Started</button>
