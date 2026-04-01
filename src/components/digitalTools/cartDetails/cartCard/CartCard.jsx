@@ -1,7 +1,7 @@
 import React from "react";
 
 const CartCard = ({ cart }) => {
-  console.log(cart);
+  // console.log(cart);
   const { name, icon, price } = cart;
   return (
     <div className="w-full bg-gray-100 rounded-xl my-3 p-4 flex items-center justify-between">

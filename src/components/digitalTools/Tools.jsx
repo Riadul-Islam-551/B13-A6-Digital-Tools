@@ -46,7 +46,7 @@ const Tools = ({ fetchProducts, cartProducts, setCartProducts }) => {
             ></Products>
           )}
           {productStage === "showCart" && (
-            <CartDetails cartProducts={cartProducts}></CartDetails>
+            <CartDetails cartProducts={cartProducts} setCartProducts={setCartProducts}></CartDetails>
           )}
         </Suspense>
       </div>

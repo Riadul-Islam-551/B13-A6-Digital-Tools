@@ -26,7 +26,7 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
       <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-200">
         <div className="flex justify-between items-start">
           <img
-            className="my-3 border border-gray-200 p-3 rounded-full"
+            className="border border-gray-200 p-3 rounded-full"
             src={icon}
             alt=""
           />{" "}

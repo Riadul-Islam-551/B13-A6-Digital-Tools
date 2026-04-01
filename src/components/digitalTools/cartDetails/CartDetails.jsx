@@ -1,8 +1,18 @@
 import React from "react";
 import CartCard from "./cartCard/CartCard";
 
-const CartDetails = ({ cartProducts }) => {
-  // console.log(cartProducts.length);
+const CartDetails = ({ cartProducts, setCartProducts }) => {
+  console.log(cartProducts);
+  let totalPay = 0;
+  for (let i = 0; i < cartProducts.length; i++) {
+    totalPay = totalPay + cartProducts[i].price;
+    // console.log(totalPay);
+  }
+
+  const emptyCart = () => {
+    setCartProducts([]);
+  };
+
   return (
     <div>
       {cartProducts.length === 0 ? (
@@ -38,11 +48,21 @@ const CartDetails = ({ cartProducts }) => {
           </p>
         </div>
       ) : (
-        <div className="max-w-3xl mx-auto ">
-          <p className="text-start font-bold text-2xl mt-9 mb-3 ">Your Cart</p>
+        <div className="max-w-3xl mx-auto border  border-gray-300 rounded-3xl p-9 my-9">
+          <h1 className="text-start font-bold text-2xl  mb-3 ">Your Cart</h1>
           {cartProducts.map((cart) => (
             <CartCard cart={cart}></CartCard>
           ))}
+          <div className="flex items-center px-2">
+            <p className="">Total:</p>
+
+            <p className="text-end font-bold text-xl w-full ">
+              $ <span>{totalPay}</span>
+            </p>
+          </div>
+          <button onClick={emptyCart} className="button-primary w-full mt-9">
+            Proceed to Checkout
+          </button>
         </div>
       )}
     </div>
