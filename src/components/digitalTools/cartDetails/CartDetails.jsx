@@ -1,5 +1,6 @@
 import React from "react";
 import CartCard from "./cartCard/CartCard";
+import { toast } from "react-toastify";
 
 const CartDetails = ({ cartProducts, setCartProducts }) => {
   // console.log(cartProducts);
@@ -11,6 +12,7 @@ const CartDetails = ({ cartProducts, setCartProducts }) => {
 
   const emptyCart = () => {
     setCartProducts([]);
+    toast("The cart products have been successfully deleted. Go to the product section.");
   };
 
   return (

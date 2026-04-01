@@ -1,5 +1,6 @@
 import React from "react";
 import { TiTick } from "react-icons/ti";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, cartProducts, setCartProducts }) => {
   const { name, description, price, period, tagType, features, icon } = product;
@@ -13,9 +14,10 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
 
     if (!existProduct) {
       setCartProducts([...cartProducts, product]);
-      alert("add the product successfully");
+
+      toast("The product added to the cart successfully");
     } else {
-      alert("the product has already added...... Go to the Cart");
+      toast("The product has already added to the cart");
     }
 
     // setIsDisabled(true);
@@ -56,7 +58,9 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
           {features.map((feature, ind) => {
             return (
               <li key={ind} className="flex items-center text-gray-600 text-sm">
-                <span className="text-green-500 mr-2"><TiTick /></span>
+                <span className="text-green-500 mr-2">
+                  <TiTick />
+                </span>
                 {feature}
               </li>
             );

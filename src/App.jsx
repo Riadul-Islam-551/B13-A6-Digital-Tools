@@ -7,6 +7,7 @@ import States from "./components/states/States";
 import Steps from "./components/steps/Steps";
 import PackagePrice from "./components/packagePrice/PackagePrice";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const fetchProducts = fetch("/product.json")
   .then((res) => res.json())
@@ -30,6 +31,8 @@ function App() {
       <Steps></Steps>
       <PackagePrice></PackagePrice>
       <Footer></Footer>
+
+      <ToastContainer />
     </>
   );
 }
