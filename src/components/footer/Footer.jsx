@@ -55,7 +55,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between lg:justify-between mt-9 p-4 text-gray-400 text-sm">
+      <div className="max-w-300 mx-auto flex flex-col md:flex-row justify-between lg:justify-between mt-9 p-4 text-gray-400 text-sm">
         <p>&copy; 2026 Digitools. All rights reserved.</p>
         <ul className="flex items-center gap-4 mt-5 md:mt-0">
           <li>Privacy Policy</li>
