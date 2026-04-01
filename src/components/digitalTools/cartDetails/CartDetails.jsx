@@ -2,7 +2,7 @@ import React from "react";
 import CartCard from "./cartCard/CartCard";
 
 const CartDetails = ({ cartProducts, setCartProducts }) => {
-  console.log(cartProducts);
+  // console.log(cartProducts);
   let totalPay = 0;
   for (let i = 0; i < cartProducts.length; i++) {
     totalPay = totalPay + cartProducts[i].price;
@@ -51,7 +51,11 @@ const CartDetails = ({ cartProducts, setCartProducts }) => {
         <div className="max-w-3xl mx-auto border  border-gray-300 rounded-3xl p-9 my-9">
           <h1 className="text-start font-bold text-2xl  mb-3 ">Your Cart</h1>
           {cartProducts.map((cart) => (
-            <CartCard cart={cart}></CartCard>
+            <CartCard
+              cart={cart}
+              cartProducts={cartProducts}
+              setCartProducts={setCartProducts}
+            ></CartCard>
           ))}
           <div className="flex items-center px-2">
             <p className="">Total:</p>

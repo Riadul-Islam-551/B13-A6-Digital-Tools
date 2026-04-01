@@ -1,8 +1,14 @@
 import React from "react";
 
-const CartCard = ({ cart }) => {
-  // console.log(cart);
+const CartCard = ({ cart, cartProducts, setCartProducts }) => {
+  console.log(cartProducts);
   const { name, icon, price } = cart;
+
+  const removeFromCart = (id) => {
+    const remainCart = cartProducts.filter((item) => item.id !== id);
+    setCartProducts(remainCart);
+  };
+
   return (
     <div className="w-full bg-gray-100 rounded-xl my-3 p-4 flex items-center justify-between">
       {/* Left Section */}
@@ -18,7 +24,10 @@ const CartCard = ({ cart }) => {
       </div>
 
       {/* Right Section */}
-      <button className="text-pink-500 font-medium text-sm hover:text-pink-600 transition">
+      <button
+        onClick={() => removeFromCart(cart.id)}
+        className="text-pink-500 font-medium text-sm hover:text-pink-600 transition"
+      >
         Remove
       </button>
     </div>
