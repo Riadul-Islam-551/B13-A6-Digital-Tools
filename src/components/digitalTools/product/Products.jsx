@@ -1,7 +1,13 @@
 import React, { use } from "react";
 import ProductCard from "./productCard/ProductCard";
 
-const Products = ({ fetchProducts ,cartProducts, setCartProducts }) => {
+const Products = ({
+  fetchProducts,
+  cartProducts,
+  setCartProducts
+  // isDisabled,
+  // setIsDisabled,
+}) => {
   const products = use(fetchProducts);
   return (
     <div>
@@ -10,7 +16,14 @@ const Products = ({ fetchProducts ,cartProducts, setCartProducts }) => {
         "
       >
         {products.map((product, ind) => (
-          <ProductCard key={ind} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts} ></ProductCard>
+          <ProductCard
+            key={ind}
+            product={product}
+            cartProducts={cartProducts}
+            setCartProducts={setCartProducts}
+            // isDisabled={isDisabled}
+            // setIsDisabled={setIsDisabled}
+          ></ProductCard>
         ))}
       </div>
     </div>

@@ -6,6 +6,9 @@ const Tools = ({ fetchProducts, cartProducts, setCartProducts }) => {
   const [productStage, setProductStage] = useState("showProducts");
   // console.log(productStage);
 
+  // set the button disabled function
+  // const [isDisabled, setIsDisabled] = useState(false);
+
   return (
     <div>
       <div className="max-w-300 mx-auto text-center py-12 md:py-20 px-2">
@@ -38,9 +41,13 @@ const Tools = ({ fetchProducts, cartProducts, setCartProducts }) => {
               cartProducts={cartProducts}
               setCartProducts={setCartProducts}
               fetchProducts={fetchProducts}
+              // isDisabled={isDisabled}
+              // setIsDisabled={setIsDisabled}
             ></Products>
           )}
-          {productStage === "showCart" && <CartDetails cartProducts={cartProducts}></CartDetails>}
+          {productStage === "showCart" && (
+            <CartDetails cartProducts={cartProducts}></CartDetails>
+          )}
         </Suspense>
       </div>
     </div>

@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ProductCard = ({ product, cartProducts, setCartProducts }) => {
   const { name, description, price, period, tagType, features, icon } = product;
 
   // set the button disabled function
-  const [isDisabled, setIsDisabled] = useState(false);
+  // const [isDisabled, setIsDisabled] = useState(false);
 
   // set the product to the cart section
-  const addToCart = () => {
-    // console.log("buy now is clicked", product);
-    setCartProducts([...cartProducts, product]);
-    setIsDisabled(true);
+  const addToCart = (product) => {
+    const existProduct = cartProducts.find((item) => item.id === product.id);
+
+    if (!existProduct) {
+      setCartProducts([...cartProducts, product]);
+      alert("add the product successfully");
+    } else {
+      alert("the product has already added...... Go to the Cart");
+    }
+
+    // setIsDisabled(true);
   };
   // console.log(isDisabled);
 
@@ -57,11 +64,10 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
 
         {/* Button */}
         <button
-          onClick={addToCart}
+          onClick={() => addToCart(product)}
           className="w-full button-primary"
-          disabled={isDisabled ? true : false}
         >
-          {isDisabled === true ? "Purchased" : "Buy Now"}
+          Buy now
         </button>
       </div>
     </div>
