@@ -2,10 +2,9 @@ import React, { Suspense, useState } from "react";
 import Products from "./product/Products";
 import CartDetails from "./cartDetails/CartDetails";
 const Tools = ({ fetchProducts, cartProducts, setCartProducts }) => {
-  // toggoling the product button and cart button 
+  // togoling the product button and cart button
   const [productStage, setProductStage] = useState("showProducts");
-  console.log(productStage);
-
+  // console.log(productStage);
 
   return (
     <div>
@@ -35,9 +34,13 @@ const Tools = ({ fetchProducts, cartProducts, setCartProducts }) => {
         {/* showing the products  */}
         <Suspense fallback={<p>Loading</p>}>
           {productStage === "showProducts" && (
-            <Products cartProducts={cartProducts} setCartProducts={setCartProducts} fetchProducts={fetchProducts}></Products>
+            <Products
+              cartProducts={cartProducts}
+              setCartProducts={setCartProducts}
+              fetchProducts={fetchProducts}
+            ></Products>
           )}
-          {productStage === "showCart" && <CartDetails></CartDetails>}
+          {productStage === "showCart" && <CartDetails cartProducts={cartProducts}></CartDetails>}
         </Suspense>
       </div>
     </div>

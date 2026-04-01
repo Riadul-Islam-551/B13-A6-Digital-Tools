@@ -14,7 +14,7 @@ const fetchProducts = fetch("/product.json")
 function App() {
 
   const [cartProducts, setCartProducts] = useState([]);
-  console.log(cartProducts);
+  // console.log(cartProducts);
   return (
     <>
       <Nav cartProducts={cartProducts}></Nav>

@@ -8,7 +8,7 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
 
   // set the product to the cart section
   const addToCart = () => {
-    console.log("buy now is clicked", product);
+    // console.log("buy now is clicked", product);
     setCartProducts([...cartProducts, product]);
     setIsDisabled(true);
   };
